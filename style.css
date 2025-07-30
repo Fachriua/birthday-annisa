@@ -1,0 +1,266 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #1e1e2f;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* OPENING SCREEN */
+#opening-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #2e2e3a, #1e1e2f);
+  color: #ff80ab;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: all 0.5s ease;
+  text-align: center;
+}
+
+#opening-screen h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+#opening-screen button {
+  background-color: #ff80ab;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#opening-screen button:hover {
+  background-color: #ff5c94;
+}
+
+/* MAIN CONTENT */
+#main-content {
+  display: none;
+  padding: 60px 20px;
+}
+
+section {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+h3 {
+  color: #ff80ab;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  display:flex ;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.gallery img {
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 128, 171, 0.3);
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* MUSIC BUTTON */
+#music-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #ff80ab;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+/* POPUP VIDEO */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 30, 47, 0.9);
+  z-index: 999;
+}
+
+.popup-content {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  background: #2e2e3a;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 128, 171, 0.4);
+}
+
+.popup-content video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* HIDDEN */
+.hidden {
+  display: none;
+}
+
+/* SURAT PANJANG */
+.letter-section {
+  margin: 60px auto;
+  max-width: 700px;
+  text-align: center;
+}
+
+.letter-box {
+  background: #2e2e3a;
+  padding: 30px;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 128, 171, 0.3);
+  min-height: 150px;
+  font-size: 1.2em;
+  white-space: pre-wrap;
+}
+
+
+button {
+  background-color: #ff80ab;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #ff5c94;
+}
+
+.flower {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/765/765514.png'); /* icon bunga PNG transparan */
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  animation: fall 8s linear infinite;
+  z-index: 5;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-50px) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.slider {
+  width: 60%;
+  max-width: 400px;
+  margin: 50px auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.1);
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  animation: slideAnim 20s infinite;
+}
+
+.slides img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@keyframes slideAnim {
+  0% { transform: translateX(0); }
+  11.11% { transform: translateX(-100%); }
+  22.22% { transform: translateX(-200%); }
+  33.33% { transform: translateX(-300%); }
+  44.44% { transform: translateX(-400%); }
+  55.55% { transform: translateX(-500%); }
+  66.66% { transform: translateX(-600%); }
+  77.77% { transform: translateX(-700%); }
+  88.88% { transform: translateX(-800%); }
+  100% { transform: translateX(0); }
+}
+
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  z-index: -10;
+  object-fit: cover;
+  filter: brightness(0.3) blur(2px); /* efek elegan */
+}
+
+.main-content, .opening-screen, .flower, .slider, .popup, .surat, .musik-btn {
+  z-index: 10;
+  position: relative;
+}
+
+.tengah {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+

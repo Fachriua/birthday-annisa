@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎂 ANNISA DAY 🎉</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="lightbox.min.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/css/lightbox.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/js/lightbox.min.js"></script>
+<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
+
+
+</head>
+<body>
+
+  <div id="balloons" class="hidden"></div>
+
+
+  <!-- Halaman Pembuka -->
+  <div id="opening-screen">
+    <H1>HALOOOOOOO SAYANGGGGG</H1>
+    <h1>🎁 BUKA DONG 🎁</h1>
+    <button id="start-btn">BUKA</button>
+    <div class="flower"></div>
+  </div>
+
+  <!-- Halaman Utama -->
+  <div id="main-content" class="hidden">
+
+    <!-- Kontrol Musik -->
+    <audio id="bg-music" loop>
+      <source src="audio.mp3" type="audio/mpeg" />
+    </audio>
+    <button id="music-btn">🔊 Mainkan Musik</button>
+
+    <!-- Judul dan Animasi -->
+     <h2 id="typewriter"></h2>
+     <h2 id="typewriter"></h2>
+     
+     <!-- Galeri -->
+     <h3 id="typewriter">🎉HAPPY BIRTHDAY ANNISA 🎉</h3>
+     <div class="slider" id="autoSlider">
+  <div class="slides">
+    <img src="img1.jpg" alt="Gambar 1" />
+    <img src="img2.jpg" alt="Gambar 2" />
+    <img src="img3.jpg" alt="Gambar 3" />
+    <img src="img4.jpg" alt="Gambar 4" />
+    <img src="img5.jpg" alt="Gambar 5" />
+    <img src="img6.jpg" alt="Gambar 6" />
+    <img src="img7.jpg" alt="Gambar 7" />
+    <img src="img8.jpg" alt="Gambar 8" />
+    <img src="img9.jpg" alt="Gambar 9" />
+  </div>
+</div>
+
+<div class="tengah">
+<div class="popup-section">
+  <button id="video-btn" style="display: flex; justify-content: center; align-items: center;">🎥 Tonton Video Ucapan</button>
+  <div id="video-popup" class="popup hidden">
+    <div class="popup-content">
+      <span class="close-popup" onclick="closeVideo()">×</span>
+      <video controls>
+        <source src="video-ucapan.mp4" type="video/mp4" />
+        Browser Anda tidak mendukung video.
+      </video>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Surat Panjang -->
+<div class="letter-section">
+  <button onclick="startLetter()">💌 Buka Surat Panjang</button>
+  <div id="letter-box" class="letter-box"></div>
+</div>
+
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Ucapan Spesial dari Fachri buat bokemku Annisa Maharani ❤️</p>
+    </footer>
+
+  </div>
+
+  <!-- Script -->
+  <script src="confetti.min.js"></script>
+  <script src="lightbox.min.js"></script>
+  <script src="typewriter.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
